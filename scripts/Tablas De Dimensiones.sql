@@ -16,9 +16,8 @@ INDEX customer_id (CustomerID) VISIBLE
 -- Dimension SalesPerson
 CREATE TABLE if not exists dim_SalesPerson (
     SalesPersonKey INTEGER NOT NULL AUTO_INCREMENT,
-    SalesPersonID INTEGER NOT NULL,    
-    SalesPersonName nvarchar(50) NOT NULL,
-    SalesTerritoryName  nvarchar(50) NOT NULL, 
+    SalesPersonID INTEGER NOT NULL,
+    SalesTerritoryName  nvarchar(50) NULL, 
 PRIMARY KEY(SalesPersonKey),
 INDEX salesperson_id (SalesPersonID) VISIBLE
 );
@@ -48,8 +47,8 @@ INDEX salesterritory_id (SalesTerritoryID) VISIBLE
 ); */
 
 
-CREATE TABLE if not exists dim_Date (
-    DateKey INTEGER NOT NULL AUTO_INCREMENT,    
+CREATE TABLE if not exists dim_Dates (
+    DateKey INTEGER NOT NULL,    
     OrderDate  DATE NOT NULL,    
     date_medium CHAR(18) NOT NULL,
     month_number TINYINT(3) NOT NULL,
@@ -58,4 +57,4 @@ CREATE TABLE if not exists dim_Date (
     year_month_number CHAR(7) NOT NULL,
 PRIMARY KEY(DateKey),
 INDEX OrderDate (OrderDate) VISIBLE
-);
+)

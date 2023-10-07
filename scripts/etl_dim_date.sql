@@ -1,4 +1,5 @@
-INSERT INTO adw_datawh.dim_Date (      
+INSERT INTO adw_datawh.dim_Dates (      
+    DateKey,
     OrderDate,    
     date_medium,
     month_number,
@@ -7,6 +8,7 @@ INSERT INTO adw_datawh.dim_Date (
     year_month_number
 )
 SELECT
+    TO_DAYS(fecha) as DateKey,
     fecha,
     DATE_FORMAT(fecha, '%d %M %Y') AS date_medium,
     MONTH(fecha) AS month,

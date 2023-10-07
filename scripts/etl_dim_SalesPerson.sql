@@ -1,12 +1,10 @@
-INSERT INTO adw_datawh.dim_SalesPerson (
-    SalesPersonID,
-    SalesPersonName,    
+ INSERT INTO adw_datawh.dim_SalesPerson (
+    SalesPersonID,     
     SalesTerritoryName
-)
+ )
 SELECT 
     SalesPerson.BusinessEntityID,
-    SalesTerritory.Name as Territory,
-    Store.Name as Store
+    SalesTerritory.Name as Territory    
 FROM adw.Sales_SalesPerson as SalesPerson
-    JOIN adw.Sales_SalesTerritory as SalesTerritory using(TerritoryID)
-    JOIN adw.Sales_Store as Store on SalesPerson.BusinessEntityID=Store.SalesPersonID;
+    LEFT JOIN adw.Sales_SalesTerritory as SalesTerritory using(TerritoryID)
+    
