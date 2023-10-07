@@ -1,4 +1,4 @@
-INSERT INTO adw_datawh.dim_Dates (      
+INSERT INTO adw_datawh.dim_Date (      
     OrderDate,    
     date_medium,
     month_number,

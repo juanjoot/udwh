@@ -13,5 +13,4 @@ SELECT
    SalesTerritory.Name as Territory
 FROM adw.Sales_Customer as Customer
     JOIN adw.Sales_SalesTerritory as SalesTerritory using(TerritoryID)
-    JOIN adw.Sales_Store as Store on Customer.StoreID=Store.BusinessEntityID
-    limit 3;
+    JOIN adw.Sales_Store as Store on Customer.StoreID=Store.BusinessEntityID;

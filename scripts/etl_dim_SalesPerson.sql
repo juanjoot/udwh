@@ -9,5 +9,4 @@ SELECT
     Store.Name as Store
 FROM adw.Sales_SalesPerson as SalesPerson
     JOIN adw.Sales_SalesTerritory as SalesTerritory using(TerritoryID)
-    JOIN adw.Sales_Store as Store on SalesPerson.BusinessEntityID=Store.SalesPersonID
-    limit 3;
+    JOIN adw.Sales_Store as Store on SalesPerson.BusinessEntityID=Store.SalesPersonID;

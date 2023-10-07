@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS adw_datawh;
 USE adw_datawh;
 
-CREATE TABLE IF NOT EXISTS fact_sales_x_ (
+CREATE TABLE IF NOT EXISTS fact_sales (
     CustomerKey INT NOT NULL,
     SalesPersonKey INT NOT NULL,
     ProductKey INT NOT NULL,    

@@ -17,5 +17,4 @@ SELECT
     SubCategory.Name as subcategory    
 FROM adw.Production_Product as Product
     JOIN adw.Production_ProductSubcategory as SubCategory using(ProductSubcategoryID)   
-    JOIN adw.Production_ProductCategory as Category using(ProductcategoryID) 
-    limit 3;
+    JOIN adw.Production_ProductCategory as Category using(ProductcategoryID);
