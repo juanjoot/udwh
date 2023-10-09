@@ -6,7 +6,7 @@ chmod +x crear-imagen.sh
 chmod +x ejecutar-contenedor.sh 
 ./ejecutar-contenedor.sh 
 chmod +x ejecutar-mysql.sh
-./ejecutar-mysql.sh
+
 ./detener-contenedor.sh -- finalizar
 
 use database;

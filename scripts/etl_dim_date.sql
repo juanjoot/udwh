@@ -9,7 +9,7 @@ INSERT INTO adw_datawh.dim_Dates (
 )
 SELECT
     TO_DAYS(fecha) as DateKey,
-    fecha,
+    DATE(fecha),
     DATE_FORMAT(fecha, '%d %M %Y') AS date_medium,
     MONTH(fecha) AS month,
     MONTHNAME(fecha) AS month_name,

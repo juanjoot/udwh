@@ -41,7 +41,7 @@ INDEX product_id (ProductID) VISIBLE
 /* CREATE TABLE if not exists dim_SalesTerritory (
     SalesTerritoryKey INTEGER NOT NULL AUTO_INCREMENT,
     SalesTerritoryID INTEGER NOT NULL,
-    SalesTerritoryName  nvarchar(50) NOT NULL,    
+    SalesTerritoryName  nvarchar(50) NOT NULL,   
 PRIMARY KEY(SalesTerritoryKey),
 INDEX salesterritory_id (SalesTerritoryID) VISIBLE
 ); */

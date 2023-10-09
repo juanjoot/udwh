@@ -27,6 +27,13 @@ CREATE TABLE IF NOT EXISTS fact_sales (
     REFERENCES dim_SalesPerson (SalesPersonKey)
     ON DELETE CASCADE
     ON UPDATE NO ACTION,
+    
+  /* CONSTRAINT fk_SalesTerritory
+    FOREIGN KEY (SalesTerritoryKey)
+    REFERENCES dim_SalesTerritory (SalesTerritoryKey)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION, */
+    
   CONSTRAINT fk_Product
     FOREIGN KEY (Productkey)
     REFERENCES dim_Product (Productkey)

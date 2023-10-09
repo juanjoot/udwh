@@ -6,7 +6,6 @@ select
     SalesPerson.SalesPersonKey,
     Product.ProductKey,    
     DDate.DateKey, 
-    DATE_FORMAT(Header.OrderDate, '%d %MM %YYYY') ,  
     Detail.UnitPrice,
     Detail.OrderQty,
     Detail.UnitPriceDiscount,
@@ -19,6 +18,6 @@ from
         left join adw_datawh.dim_Customer customer on Header.CustomerID=customer.CustomerID
         left join adw_datawh.dim_SalesPerson SalesPerson on Header.SalesPersonID=SalesPerson.SalesPersonID
         left join adw_datawh.dim_Product Product on Detail.ProductID = Product.ProductID
-        left join adw_datawh.dim_Dates DDate on Header.OrderDate=DDate.OrderDate 
-   limit 10;
+        left join adw_datawh.dim_Dates DDate on DATE(Header.OrderDate)=DDate.OrderDate 
+;
 
