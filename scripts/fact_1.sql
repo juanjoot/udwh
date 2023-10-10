@@ -3,10 +3,11 @@
 USE adw_datawh;
 
 SELECT   
-    -- Product.ProductName,    
+       Product.ProductName,    
        Customer.CustomerName,
        Product.Category,
-    -- Product.subcategory,
+       Product.subcategory,
+       Customer.SalesTerritoryName,
     -- Dates.OrderDate,
     sum(sales.OrderQty) Cantidad
        
@@ -17,10 +18,11 @@ FROM adw_datawh.fact_sales sales
     inner join dim_Dates Dates using (DateKey)
 where Product.Category = 'Bikes'
 group by 
-    -- Product.ProductName,    
+    Product.ProductName,    
     Product.Category,
-    Customer.CustomerName
-    -- Product.subcategory,
+    Customer.CustomerName,
+    Customer.SalesTerritoryName,
+    Product.subcategory
     -- Dates.OrderDate
 Order by sum(sales.OrderQty) desc
 ;
